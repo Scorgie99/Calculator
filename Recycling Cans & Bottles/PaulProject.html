@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="STYLES.CSS">
+
+
+
+</head>
+
+
+
+
+<body>
+    <header>
+        Mother Nature Enterprises Present
+    </header>
+    
+    <h1>
+        Energy Saved Calculator
+    </h1>
+
+    <h3>
+        Hey everyone awesome job today. You made a real difference picking up all that litter and have made the cycle path look soooooooo much better.
+    </h3>
+
+    <h3>
+        I'm sure you're off now for a well deserved rest, a nice warm shower and the chance to binge watch Peaky Blinders on Netflix but before you go...Have you ever wondered how we get the energy to heat water and power our devices? If you do then you've come to the right place. On our lil old calculator here, simply pop in the number of cans and plastic bottles you've collected and recyled and we'll let you know how much energy you've saved the planet
+    </h3>
+
+    <h3>
+        Before we scroll down to the calculator, take a few minutes to read the amazing facts about cans and plastic bottles below.
+    </h3>
+
+
+    <section class="aluminiumcans">
+        <p>
+        Lets jump in with some astonishing facts about aluminium cans. Believe it our not aluminium cans come in a two-piece varieety, just like Dad's suit
+        </p>
+    
+            <ul>
+                <li>We use over 80,000,000,000 aluminium soda cans evert year</li>
+                <li>The use of aluminium cans began in 1957</li>
+                <li>Aluminium can take between 200-500 years to degrade whilst in landfill</li>
+                <li>The largest collection of Coca-Cola soda cans belonged to Gary Feng of Canada with 11,308 variations of the Coca-Cola cans from 108 countries</li>
+                <li>Recycling aluminium takes 95% less energy than making aluminium from raw materials</li>
+            </ul>
+
+
+    <section class="plasticbottles">
+        <p>
+        And lets not forget about those plastic bottles with their pesky microplastics. There are though a load of cool things you can do with a bottle after you've finished your drink like a rainwater collector to measure rainfall or use the tops for mini cloches when starting off your flower seeds.
+        </p>
+
+        <ul>
+            <li>90% of the cost of bottled water is the bottle itself</li>
+            <li>plastic was invested in 1907 by Leo Baekeland</li>
+            <li>24 million litres of oil could produce 3 billion plastic bottles</li>
+            <li>But 80% of bottles never get recycled</li>
+            <li>Almost every piece of plastic ever made still exists today</li>
+        </ul>
+    </section>
+
+    <form>
+        <div>
+            <label>How many cans did you manage to bag?</label>
+            <input type="number" id="cansgot">
+        </div>
+        <div>
+            <label>How many bottles did you save the Sea Turtles from?</label>
+            <input type="number" id="plasticsgot">
+        </div>
+    </form>
+
+        <form>
+            <button id="subButton" type="button">Submit & Find Out How You Did!</button>
+        </form>
+
+        <h1 id="first">
+            How many kWhs of energy did I save?
+        </h1>
+
+        <h1 id="warrior">
+            And what does this mean for you and our planet?
+        </h1>
+
+    <script>
+    
+
+
+    function greengoal(){
+        let cansgot = document.getElementById('cansgot')
+        let plasticsgot = document.getElementById('plasticsgot')
+        let totalgot = document.getElementById('cansgot'+'plasticsgot')
+
+        
+    }
+
+  
+
+
+  
+
+            function someActionsToRun() {
+                let firstP    = document.getElementById('first');
+                let secondP   = document.getElementById('warrior');
+
+                let cansgot = document.getElementById('cansgot').value;
+                let plasticsgot = document.getElementById('plasticsgot').value;
+              
+
+                let totalgreen = (0.96 * cansgot)+(0.65 * plasticsgot);
+                firstP.innerHTML = Math.floor(totalgreen)
+
+
+
+                if (firstP.innerHTML > 33)
+                secondP.innerHTML = "Great job!!! You've saved over 33 kWh of energy. Why 33?, That's more than the average energy footprint someone uses in a single day!!!"
+                if (firstP.innerHTML >15 && firstP.innerHTML <33)
+                secondP.innerHTML = "Good job today!!! you helped make a real difference and saved enough energy to power the washer, dryer, tele and fridge running for the day!!!"
+                if (firstP.innerHTML >0 && firstP.innerHTML <14)
+                secondP.innerHTML = "You've made an awesome start to being more environmentally conscious, keep it up my dude !!!"
+                if (firstP.innerHTML <=0)
+                secondP.innerHTML = "C'Mon Maaaaaaaaaan!!!"
+    
+
+            
+            }
+
+       
+
+            let myPageButton = document.getElementById('subButton');
+            myPageButton.addEventListener('click', someActionsToRun);
+
+            
+        </script>
+    
+
+       
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <img src="tree.jpg" class="center" >
+    <footer>by Paul Griffin-Pygott</footer>
+
+</body>
+</html>
